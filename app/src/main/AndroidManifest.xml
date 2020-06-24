@@ -9,8 +9,9 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.ChatDetailActivity"></activity>
+        <activity android:name=".view.ChatDetailActivity" />
         <activity android:name=".view.DetailOrderActivity" />
         <activity
             android:name=".view.ForgotPasswordActivity"
