@@ -12,6 +12,11 @@ import retrofit2.Response
 
 class LoginActivityPresenter(private val iLoginActivityView: ILoginActivityView) :
     ILoginActivityPresenter {
+
+    companion object {
+        var currentToken = ""
+    }
+
     override fun userLogin(email: String, password: String) {
 //        val firebaseAuth = FirebaseAuth.getInstance()
 //        firebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener {
@@ -39,7 +44,18 @@ class LoginActivityPresenter(private val iLoginActivityView: ILoginActivityView)
                     response: Response<PostLoginResponse>
                 ) {
                     if (response.isSuccessful){
-                        iLoginActivityView.onLoginSuccess()
+                        if (response.body() != null) {
+                            if (response.body()?.error_code == 0) {
+                                if (response.body()?.payload != null) {
+                                    currentToken = response.body()?.payload!!.token
+                                } else {
+                                    iLoginActivityView.onLoginFailed()
+                                }
+                                iLoginActivityView.onLoginSuccess()
+                            } else {
+                                iLoginActivityView.onLoginFailed()
+                            }
+                        }
                     }
                 }
 
