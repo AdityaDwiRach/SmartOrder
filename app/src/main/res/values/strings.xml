@@ -1,3 +1,27 @@
 <resources>
     <string name="app_name">SmartOrder</string>
+
+    <string name="login_caps">LOGIN</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="forgot_caps">FORGOT</string>
+    <string name="submit_caps">SUBMIT</string>
+    <string name="forgot_pass_inst">Enter your email here, we will send you link to recover your password.</string>
+    <string name="home">Home</string>
+    <string name="product">Product</string>
+    <string name="order">Order</string>
+    <string name="chat">Chat</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="status_saat_ini">Status saat ini :</string>
+    <string name="pesanan_baru">Pesanan baru :</string>
+    <string name="pesanan_berlangsung">Pesanan berlangsung :</string>
+    <string name="chat_belum_dibaca">Chat belum dibaca :</string>
+
+    <string-array name="list_status">
+        <item>ORDER</item>
+        <item>PENDING</item>
+        <item>DONE</item>
+    </string-array>
 </resources>
