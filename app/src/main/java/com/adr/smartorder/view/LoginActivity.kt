@@ -23,7 +23,8 @@ class LoginActivity : AppCompatActivity(), ILoginActivityView {
         presenter.isUserLoggedIn()
 
         val emailRegex = "^(?=.*[a-z])(?=.*[@])(?=.*[.])(?=\\S+$).{6,}$"
-        val passwordRegex = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=\\S+$).{6,}$"
+        val passwordRegex = "^(?=\\S+$).{6,}$"
+//        val passwordRegex = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=\\S+$).{6,}$"
 
         et_login_email.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {}

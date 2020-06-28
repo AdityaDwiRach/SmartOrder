@@ -18,7 +18,7 @@ class ProductFragmentPresenter(private val iProductView: IProductView): IProduct
         headerGetProdList["Token"] = currentToken
 
         APIClient().client().create(APIInterface::class.java)
-            .getProdGroupList(headerGetProdList, "getProdGrpList", "1", "10", "Group A")
+            .getProdGroupList(headerGetProdList, "getProdGrpList", "1", "10", "")
             .enqueue(object : Callback<GetProdGroupLsRes> {
                 override fun onFailure(call: Call<GetProdGroupLsRes>, t: Throwable) {
                     iProductView.onFailedGetList(t.message.toString())

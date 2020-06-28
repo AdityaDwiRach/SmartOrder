@@ -18,7 +18,7 @@ private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
 class ProductFragment : Fragment(), IProductView {
-    // TODO: Rename and change types of parameters
+
     private var param1: String? = null
     private var param2: String? = null
     private val presenter by lazy { ProductFragmentPresenter(this) }
@@ -77,7 +77,9 @@ class ProductFragment : Fragment(), IProductView {
     }
 
     override fun onFailedGetList(error: String) {
-        Toast.makeText(context, error, Toast.LENGTH_SHORT).show()
+        if (context != null) {
+            Toast.makeText(context?.applicationContext, error, Toast.LENGTH_SHORT).show()
+        }
     }
 
     override fun onSuccessSearch(listData: List<PayloadProdGroupRes>) {

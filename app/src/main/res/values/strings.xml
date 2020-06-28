@@ -18,4 +18,10 @@
     <string name="pesanan_baru">Pesanan baru :</string>
     <string name="pesanan_berlangsung">Pesanan berlangsung :</string>
     <string name="chat_belum_dibaca">Chat belum dibaca :</string>
+
+    <string-array name="list_status">
+        <item>ORDER</item>
+        <item>PENDING</item>
+        <item>DONE</item>
+    </string-array>
 </resources>
